@@ -1,5 +1,10 @@
 class Solution:
     def kidsWithCandies(self, candies: list[int], extraCandies: int) -> list[bool]:
-        maxCandies = max(candies)
+        m_c = max(candies)
 
-        return[(curNum + extraCandies >= maxCandies) for curNum in candies]
+        for i in range(len(candies)):
+            if candies[i] + extraCandies >= m_c:
+                candies[i] = True
+            else:
+                candies[i] = False
+        return candies
