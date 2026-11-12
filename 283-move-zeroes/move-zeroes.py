@@ -9,3 +9,4 @@ class Solution:
         while left < len(nums):
             nums[left] = 0
             left+=1
+            
